@@ -198,7 +198,7 @@ def run_tracker():
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(current_list, f, indent=4)
         
-        time.sleep(1)
+        time.sleep(15)
 
 if __name__ == "__main__":
     run_tracker()
