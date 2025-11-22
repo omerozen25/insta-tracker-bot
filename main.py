@@ -11,7 +11,48 @@ from email.mime.multipart import MIMEMultipart
 # =================================================================
 
 # Takip edilecek kullanıcı listesi
-TARGET_USERS = ["leomessi", "cristiano", "neymarjr"] 
+TARGET_USERS = [
+    # --- 👑 ZİRVE SPOR & MEDYA FENOMENLERİ (MUTLAK TAKİP) ---
+    "cristiano", "leomessi", "therock", "selenagomez", "kyliejenner", 
+    "arianagrande", "kimkardashian", "beyonce", "neymarjr", "virat.kohli", 
+    "khloekardashian", "kendalljenner", "jlo", "taylorswift", "justinbieber",
+    
+    # --- ⚽ EK SPOR DÜNYASI ---
+    "kingjames", "k.mbappe", "davidbeckham", "ronaldinho", "marcelotwelve",
+    "karimbenzema", "garethbale11", "floydmayweather", "lewishamilton",
+    "m_phelps00", "sergioramos", "zlatanibrahimovic", "neuer",
+    "mesutozil", "hakancalhanoglu", "mb459", "virendersehwag",
+    
+    # --- 🎤 MÜZİK İKONLARI VE K-POP ---
+    "mileycyrus", "katyperry", "badgalriri", "billieeilish", "shakira",
+    "dualipa", "champagnepapi", "chrisbrownofficial", "adele", "nickiminaj",
+    "rauwalejandro", "camila_cabello", "sza", "jbalvin", "snoopdogg",
+    "usher", "jennierubyjane", "sooyaaa__", "roses_are_rosie", "uarmyhope",
+    "thv", "jungkook.97", "bts.bighitofficial", "g_dragon",
+
+    # --- 🎬 HOLLYWOOD VE SİNEMA ---
+    "willsmith", "angelinajolie", "vancityreynolds", "chrishemsworth",
+    "emmawatson", "tomholland2013", "robertdowneyjr", "gal_gadot",
+    "vindiesel", "leodicaprio", "chrispratt", "tomcruise", "jasonstatham",
+    "anade_armas", "margotrobbie", "hrithikroshan", "aishwaryaraibachchan_arb",
+    "deepikapadukone", "shraddhakapoor", "katrinakaif", "aliaabhatt",
+    "akshaykumar", "ranveersingh",
+
+    # --- 📺 TV VE KÜRESEL İÇERİK ÜRETİCİLERİ ---
+    "mrbeast", "ellendegeneres", "jimmyfallon", "oprah", "parishilton",
+    "gigihadid", "bellahadid", "haileybieber", "zacefron", "ashleygraham",
+    "tyrabanks", "danbilzerian", "loganpaul", "jakepaul", "charlidamelio",
+    "addisonrae", "khaby00", "theweeknd", "lisaandlena", "noahcentineo",
+
+    # --- 💼 İŞ DÜNYASI VE DİĞER ETKİLİ İSİMLER ---
+    "jeffbezos", "richardbranson", "elonmusk", "garyvee", "mariotestino",
+    "barackobama", "michelleobama", "theellenshow", "ted", "nasa",
+
+    # --- KURUMSAL HESAPLAR ---
+    "nike", "natgeo", "realmadrid", "fcbarcelona", "championsleague",
+    "nba", "premierleague", "victoriassecret", "adidasfootball",
+    "marvel", "espn", "houseofhighlights"
+] 
 
 # API ve Token Bilgileri
 API_URL = "https://jydgtalarwcfcailwvha.supabase.co/functions/v1/fetch-preview-following"
