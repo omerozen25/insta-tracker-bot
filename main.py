@@ -15,7 +15,7 @@ TARGET_USERS = [
     # --- 👑 ZİRVE SPOR & MEDYA FENOMENLERİ (MUTLAK TAKİP) ---
     "cristiano", "leomessi", "therock", "selenagomez", "kyliejenner", 
     "arianagrande", "kimkardashian", "beyonce", "neymarjr", "virat.kohli", 
-    "khloekardashian", "kendalljenner", "jlo", "taylorswift", "justinbieber",
+    "khloekardashian", "kendalljenner", "jlo", "taylorswift", "justinbieber", "kourtneykardash", "simeone", "mrancelotti"
     
     # --- ⚽ EK SPOR DÜNYASI ---
     "kingjames", "k.mbappe", "davidbeckham", "ronaldinho", "marcelotwelve",
@@ -34,7 +34,7 @@ TARGET_USERS = [
     "willsmith", "angelinajolie", "vancityreynolds", "chrishemsworth",
     "emmawatson", "tomholland2013", "robertdowneyjr", "gal_gadot",
     "vindiesel", "leodicaprio", "chrispratt", "tomcruise", "jasonstatham",
-    "anade_armas", "margotrobbie", "hrithikroshan", "aishwaryaraibachchan_arb",
+    "ana_d_armas", "margotrobbieofficial", "hrithikroshan", "aishwaryaraibachchan_arb",
     "deepikapadukone", "shraddhakapoor", "katrinakaif", "aliaabhatt",
     "akshaykumar", "ranveersingh",
 
