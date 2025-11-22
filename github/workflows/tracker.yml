@@ -1,0 +1,51 @@
+name: Instagram Takip Botu
+
+# Botun ne zaman çalışacağını tanımla
+on:
+  schedule:
+    # Her 30 dakikada bir çalışır (Cron formatı)
+    - cron: '*/30 * * * *' 
+  workflow_dispatch: # GitHub arayüzünden manuel çalıştırma butonu ekler
+
+permissions:
+  contents: write # Repoya dosya kaydetme (commit etme) izni verir
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    
+    # Secretları (Gizli Anahtarları) Python koduna Environment Variable olarak iletiyoruz
+    env: 
+      SUPABASE_TOKEN: ${{ secrets.SUPABASE_TOKEN }}
+      GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+      RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+
+    steps:
+      - name: 1. Depoyu Çek
+        uses: actions/checkout@v3
+
+      - name: 2. Python Kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: 3. Kütüphaneleri Yükle (requirements.txt)
+        # requests kütüphanesini yükler
+        run: pip install -r requirements.txt
+
+      - name: 4. Botu Çalıştır ve Kontrol Yap
+        # main.py dosyasını çalıştırır
+        run: python main.py
+
+      - name: 5. Verileri Kaydet (Commit & Push)
+        # BU ADIM KRİTİKTİR: data/ klasöründeki JSON dosyalarını repoya geri kaydeder.
+        # Bu, botun bir sonraki çalışmada "hafızası" (hangi kullanıcıları takip ediyordu) olur.
+        run: |
+          git config --global user.name "InstaBot"
+          git config --global user.email "bot@github.com"
+          # Sadece data klasöründeki değişiklikleri ekle
+          git add data/
+          # Değişiklik varsa commit yap, yoksa hata verme
+          git commit -m "Takip listesi güncellendi [GitHub Actions]" || echo "Değişiklik yok, commit atlanıyor."
+          git push
