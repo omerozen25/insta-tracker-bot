@@ -15,25 +15,25 @@ TARGET_USERS = [
     # --- 👑 ZİRVE SPOR & MEDYA FENOMENLERİ (MUTLAK TAKİP) ---
     "cristiano", "leomessi", "therock", "selenagomez", "kyliejenner", 
     "arianagrande", "kimkardashian", "beyonce", "neymarjr", "virat.kohli", 
-    "khloekardashian", "kendalljenner", "jlo", "taylorswift", "justinbieber", "kourtneykardash", "simeone", "mrancelotti"
+    "khloekardashian", "kendalljenner", "jlo", "taylorswift", "kourtneykardash", "simeone", "mrancelotti"
     
     # --- ⚽ EK SPOR DÜNYASI ---
     "kingjames", "k.mbappe", "davidbeckham", "ronaldinho", "marcelotwelve",
     "karimbenzema", "garethbale11", "floydmayweather", "lewishamilton",
-    "m_phelps00", "sergioramos", "zlatanibrahimovic", "neuer",
-    "mesutozil", "hakancalhanoglu", "mb459", "virendersehwag",
+    "m_phelps00", "sergioramos",  
+    "hakancalhanoglu", "mb459", "virendersehwag",
     
     # --- 🎤 MÜZİK İKONLARI VE K-POP ---
-    "mileycyrus", "katyperry", "badgalriri", "billieeilish", "shakira",
-    "dualipa", "champagnepapi", "chrisbrownofficial", "adele", "nickiminaj",
+    "katyperry", "badgalriri", "shakira",
+    "dualipa", "champagnepapi", "chrisbrownofficial", "adele", 
     "rauwalejandro", "camila_cabello", "sza", "jbalvin", "snoopdogg",
-    "usher", "jennierubyjane", "sooyaaa__", "roses_are_rosie", "uarmyhope",
+    "usher", "jennierubyjane", "roses_are_rosie", "uarmyhope",
     "thv", "jungkook.97", "bts.bighitofficial", "g_dragon",
 
     # --- 🎬 HOLLYWOOD VE SİNEMA ---
     "willsmith", "angelinajolie", "vancityreynolds", "chrishemsworth",
     "emmawatson", "tomholland2013", "robertdowneyjr", "gal_gadot",
-    "vindiesel", "leodicaprio", "chrispratt", "tomcruise", "jasonstatham",
+    "vindiesel", "leodicaprio",  "tomcruise",
     "ana_d_armas", "margotrobbieofficial", "hrithikroshan", "aishwaryaraibachchan_arb",
     "deepikapadukone", "shraddhakapoor", "katrinakaif", "aliaabhatt",
     "akshaykumar", "ranveersingh",
@@ -42,10 +42,10 @@ TARGET_USERS = [
     "mrbeast", "ellendegeneres", "jimmyfallon", "oprah", "parishilton",
     "gigihadid", "bellahadid", "haileybieber", "zacefron", "ashleygraham",
     "tyrabanks", "danbilzerian", "loganpaul", "jakepaul", "charlidamelio",
-    "addisonrae", "khaby00", "theweeknd", "lisaandlena", "noahcentineo",
+    "addisonrae", "khaby00", "lisaandlena", "noahcentineo",
 
     # --- 💼 İŞ DÜNYASI VE DİĞER ETKİLİ İSİMLER ---
-    "jeffbezos", "richardbranson", "elonmusk", "garyvee", "mariotestino",
+    "jeffbezos", "richardbranson", "garyvee", "mariotestino",
     "barackobama", "michelleobama", "theellenshow", "ted", "nasa",
 
     # --- KURUMSAL HESAPLAR ---
