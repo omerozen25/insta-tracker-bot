@@ -4,7 +4,7 @@ name: Instagram Takip Botu
 on:
   schedule:
     # Her 30 dakikada bir çalışır (Cron formatı)
-    - cron: '*/30 * * * *' 
+    - cron: '*/120 * * * *' 
   workflow_dispatch: # GitHub arayüzünden manuel çalıştırma butonu ekler
 
 permissions:
