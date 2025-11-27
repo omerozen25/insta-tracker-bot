@@ -12,47 +12,267 @@ from email.mime.multipart import MIMEMultipart
 
 # Takip edilecek kullanıcı listesi
 TARGET_USERS = [
-    # --- 👑 ZİRVE SPOR & MEDYA FENOMENLERİ (MUTLAK TAKİP) ---
-    "cristiano", "leomessi", "therock", "selenagomez", "kyliejenner", 
-    "arianagrande", "kimkardashian", "beyonce", "neymarjr", "virat.kohli", 
-    "khloekardashian", "kendalljenner", "jlo", "taylorswift", "kourtneykardash", "simeone", "mrancelotti"
-    
-    # --- ⚽ EK SPOR DÜNYASI ---
-    "kingjames", "k.mbappe", "davidbeckham", "ronaldinho", "marcelotwelve",
-    "karimbenzema", "garethbale11", "floydmayweather", "lewishamilton",
-    "m_phelps00", "sergioramos",  
-    "hakancalhanoglu", "mb459", "virendersehwag",
-    
-    # --- 🎤 MÜZİK İKONLARI VE K-POP ---
-    "katyperry", "badgalriri", "shakira",
-    "dualipa", "champagnepapi", "chrisbrownofficial", "adele", 
-    "rauwalejandro", "camila_cabello", "sza", "jbalvin", "snoopdogg",
-    "usher", "jennierubyjane", "roses_are_rosie", "uarmyhope",
-    "thv", "jungkook.97", "bts.bighitofficial", "g_dragon",
+    "cristiano",
+    "leomessi",
+    "therock",
+    "selenagomez",
+    "kyliejenner",
+    "arianagrande",
+    "kimkardashian",
+    "beyonce",
+    "neymarjr",
+    "virat.kohli",
+    "khloekardashian",
+    "kendalljenner",
+    "jlo",
+    "taylorswift",
+    "kourtneykardash",
+    "simeone",
+    "mrancelotti",
 
-    # --- 🎬 HOLLYWOOD VE SİNEMA ---
-    "willsmith", "angelinajolie", "vancityreynolds", "chrishemsworth",
-    "emmawatson", "tomholland2013", "robertdowneyjr", "gal_gadot",
-    "vindiesel", "leodicaprio",  "tomcruise",
-    "ana_d_armas", "margotrobbieofficial", "hrithikroshan", "aishwaryaraibachchan_arb",
-    "deepikapadukone", "shraddhakapoor", "katrinakaif", "aliaabhatt",
-    "akshaykumar", "ranveersingh",
+    "kingjames",
+    "k.mbappe",
+    "davidbeckham",
+    "ronaldinho",
+    "marcelotwelve",
+    "karimbenzema",
+    "garethbale11",
+    "floydmayweather",
+    "lewishamilton",
+    "m_phelps00",
+    "sergioramos",
+    "hakancalhanoglu",
+    "mb459",
+    "virendersehwag",
 
-    # --- 📺 TV VE KÜRESEL İÇERİK ÜRETİCİLERİ ---
-    "mrbeast", "ellendegeneres", "jimmyfallon", "oprah", "parishilton",
-    "gigihadid", "bellahadid", "haileybieber", "zacefron", "ashleygraham",
-    "tyrabanks", "danbilzerian", "loganpaul", "jakepaul", "charlidamelio",
-    "addisonrae", "khaby00", "lisaandlena", "noahcentineo",
+    "katyperry",
+    "badgalriri",
+    "shakira",
+    "dualipa",
+    "champagnepapi",
+    "chrisbrownofficial",
+    "adele",
+    "rauwalejandro",
+    "camila_cabello",
+    "sza",
+    "jbalvin",
+    "snoopdogg",
+    "usher",
+    "jennierubyjane",
+    "roses_are_rosie",
+    "uarmyhope",
+    "thv",
+    "jungkook.97",
+    "bts.bighitofficial",
+    "g_dragon",
 
-    # --- 💼 İŞ DÜNYASI VE DİĞER ETKİLİ İSİMLER ---
-    "jeffbezos", "richardbranson", "garyvee", "mariotestino",
-    "barackobama", "michelleobama", "theellenshow", "ted", "nasa",
+    "willsmith",
+    "angelinajolie",
+    "vancityreynolds",
+    "chrishemsworth",
+    "emmawatson",
+    "tomholland2013",
+    "robertdowneyjr",
+    "gal_gadot",
+    "vindiesel",
+    "leodicaprio",
+    "tomcruise",
+    "ana_d_armas",
+    "margotrobbieofficial",
+    "hrithikroshan",
+    "aishwaryaraibachchan_arb",
+    "deepikapadukone",
+    "shraddhakapoor",
+    "katrinakaif",
+    "aliaabhatt",
+    "akshaykumar",
+    "ranveersingh",
 
-    # --- KURUMSAL HESAPLAR ---
-    "nike", "natgeo", "realmadrid", "fcbarcelona", "championsleague",
-    "nba", "premierleague", "victoriassecret", "adidasfootball",
-    "marvel", "espn", "houseofhighlights"
-] 
+    "mrbeast",
+    "ellendegeneres",
+    "jimmyfallon",
+    "oprah",
+    "parishilton",
+    "gigihadid",
+    "bellahadid",
+    "haileybieber",
+    "zacefron",
+    "ashleygraham",
+    "tyrabanks",
+    "danbilzerian",
+    "loganpaul",
+    "jakepaul",
+    "charlidamelio",
+    "addisonrae",
+    "khaby00",
+    "lisaandlena",
+    "noahcentineo",
+
+    "jeffbezos",
+    "richardbranson",
+    "garyvee",
+    "mariotestino",
+    "barackobama",
+    "michelleobama",
+    "theellenshow",
+    "ted",
+    "nasa",
+
+    "nike",
+    "natgeo",
+    "realmadrid",
+    "fcbarcelona",
+    "championsleague",
+    "nba",
+    "premierleague",
+    "victoriassecret",
+    "adidasfootball",
+    "marvel",
+    "espn",
+    "houseofhighlights",
+
+    # --- Real Madrid oyuncuları ---
+    "thibautcourtois",
+    "dani.carvajal.2",
+    "edermilitao",
+    "davidalaba",
+    "trent",
+    "toniruediger",
+    "ferland_mendy",
+    "deanhuijsen",
+    "judebellingham",
+    "camavinga",
+    "fedevalverde",
+    "aurelientchm",
+    "ardaguler",
+    "daniceballos4",
+    "vinijr",
+    "endrick",
+    "rodrygogoes",
+    "gonzalogarcia7_",
+    "brahim",
+    "franco.mastantuono",
+
+    # --- Barcelona oyuncuları ---
+    "materstegen",
+    "__joangarcia",
+    "wojciech.szczesny1",
+    "alejandrobalde",
+    "ronaldaraujo_4",
+    "paucubarsi",
+    "andreaschristensen3",
+    "jkeey4",
+    "ericgm3",
+    "pablogavi",
+    "pedri",
+    "daniolmo",
+    "frenkiedejong",
+    "marcbernal_",
+    "ferrantorres",
+    "_rl9",
+    "lamineyamal",
+    "raphinha",
+    "marcusrashford",
+    "roony",
+
+    # --- PSG / Diğer büyük kulüp oyuncuları ---
+    "achrafhakimi",
+    "marquinhosm5",
+    "vitinha",
+    "goncaloramos88",
+    "kvara7",
+    "kanginleeoficial",
+    "lucashernandez21",
+    "nunomendes_5",
+    "fabianruiz52",
+    "_lc30_",
+    "illiazabarnyi",
+
+    # --- Manchester City ---
+    "donnarumma",
+    "rubendias",
+    "johnstones5",
+    "nathanake",
+    "josko_gvardiol",
+    "philfoden",
+    "jackgrealish",
+    "erling",
+    "bernardocarvalhosilva",
+
+    # --- Liverpool / Premier Lig karması ---
+    "mosalah",
+    "virgilvandijk",
+    "alissonbecker",
+    "darwin_n9",
+    "alex_isak",
+    "fedexchiesa",
+    "codymathesgakpo",
+    "alemacallister",
+    "szoboszlaidominik",
+
+    # --- Bayern Münih vs. ---
+    "harrykane",
+    "joshua.kimmich",
+    "leon_goretzka",
+    "jamalmusiala10",
+    "alphonsodavies",
+    "sergegnabry",
+    "upamecano",
+    "m.olise",
+
+    # --- Juventus ---
+    "locamanuel73",
+    "kenanyildiz_official",
+
+    # --- Milan ---
+    "iamrafaeleao93",
+    "magicmikemaignan",
+    "cmpulisic",
+    "theo3hernandez",
+    "adrienrabiot_25",
+
+    # --- Inter ---
+    "lautaromartinez",
+    "nicolo_barella",
+    "yannsommer",
+    "alessandrobastoni",
+    "thuram",
+
+    # --- Arsenal ---
+    "bukayosaka87",
+    "odegaard.98",
+    "dejesusoficial",
+    "gabriel.martinelli",
+    "declanrice",
+
+    # --- 🌍 EKLENEN DÜNYA ÇAPINDA MEGA ÜNLÜLER ---
+    "lilbieber",
+    "nickiminaj",
+    "mileycyrus",
+    "billieeilish",
+    "iamcardib",
+    "badbunnypr",
+    "ladygaga",
+    "zendaya",
+    "kevinhart4real",
+    "ddlovato",
+    "lalalalisa_m",
+    "sooyaaa__",
+    "stephencurry30",
+    "thenotoriousmma",
+    "narendramodi",
+    "priyankachopra",
+    "maluma",
+    "karolg",
+    "dojacat",
+    "travisscott",
+    "shawnmendes",
+    "zayn",
+    "anitta",
+    "paulpogba",
+    "jenniferaniston",
+]
+
 
 # API ve Token Bilgileri
 API_URL = "https://jydgtalarwcfcailwvha.supabase.co/functions/v1/fetch-preview-following"
@@ -97,7 +317,7 @@ def send_email(subject, body):
         print(f"❌ Mail gönderme hatası: {e}. Uygulama şifrenizi kontrol edin.")
 
 def get_current_following(username):
-    """API'den kullanıcının takip ettiklerini çeker. API hatası durumunda mail gönderir."""
+    """API'den kullanıcının takip ettiklerini çeker. 401/403 hatalarında mail gönderir."""
     payload = {"username": username, "amount": 100}
     
     try:
@@ -107,19 +327,20 @@ def get_current_following(username):
             error_message = f"API Hatası ({username}): Status Code {response.status_code}"
             print(f"⚠️ {error_message}")
 
-            # Kritik API Hatası Kontrolü (401/403 Token sorunu veya 5xx Sunucu sorunu)
-            if response.status_code in [401, 403, 500, 502]: 
-                subject = f"🚨 KRİTİK HATA: TOKEN VEYA API BAĞLANTI SORUNU ({response.status_code})"
+            # SADECE 401 (Unauthorized) veya 403 (Forbidden) ise mail gönder!
+            if response.status_code in [401, 403]: 
+                subject = f"🚨 KRİTİK HATA: TOKEN SORUNU ({response.status_code})"
                 body = (
                     f"Takip botu çalışırken kritik bir hata oluştu:\n\n"
                     f"Kullanıcı: {username}\n"
                     f"Hata Kodu: {response.status_code}\n"
-                    f"Açıklama: API isteği başarısız oldu. Eğer hata kodu 401 veya 403 ise, Bearer Token'ın süresi dolmuş olabilir. Lütfen token'ı güncelleyin."
+                    f"Açıklama: Bearer Token'ın süresi dolmuş veya geçersiz olmuş olabilir.\n"
+                    f"Lütfen GitHub Secrets'taki SUPABASE_TOKEN'ı güncelleyin."
                 )
                 # Hata mailini gönder
                 send_email(subject, body)
                 
-            return None
+            return None # Diğer tüm hatalarda (500, 502, vb.) mail atmadan devam eder.
 
         data = response.json()
         following_list = []
@@ -135,12 +356,7 @@ def get_current_following(username):
 
     except requests.exceptions.RequestException as e:
         print(f"❌ Bağlantı hatası ({username}): {e}")
-        
-        # Bağlantı kesintilerinde de mail gönder (API URL yanlış olabilir)
-        subject = f"🚨 KRİTİK HATA: İNTERNET VEYA ADRES SORUNU"
-        body = f"Takip botu çalışırken bir bağlantı hatası oluştu:\n\nHata: {e}\n\nLütfen API URL'sini kontrol edin."
-        send_email(subject, body)
-
+        # Bağlantı hatasında mail göndermez, sadece konsola yazar
         return None
 
 def run_tracker():
